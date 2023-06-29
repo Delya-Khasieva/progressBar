@@ -10,13 +10,7 @@ export default function NavBar() {
         </a>
         <form className="d-flex">
           <a className="navbar-brand" href="/admin/users">
-            Добавление сотрудника
-          </a>
-          <a className="navbar-brand" href="/admin/lists">
-            Все шаблоны
-          </a>
-          <a className="navbar-brand" href="/admin/lists/my">
-            Мои шаблоны
+            Пользователи
           </a>
           <a className="navbar-brand" href="/admin/lists/process/all/">
             Все листки адаптации

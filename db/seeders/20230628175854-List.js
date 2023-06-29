@@ -4,10 +4,10 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Lists', [{
-      title: 'Чек-лист на первый день',
-      user_id: 1
-     
-      },
+      name1: 'Деля',
+      name2: 'Адам',
+      user_id: 1,
+    },
       
 
    
