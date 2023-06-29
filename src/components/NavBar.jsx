@@ -10,16 +10,25 @@ export default function NavBar() {
         </a>
         <form className="d-flex">
           <a className="navbar-brand" href="/admin/users">
-            All Users
+            Добавление сотрудника
           </a>
           <a className="navbar-brand" href="/admin/lists">
-            All Lists
+            Все шаблоны
           </a>
           <a className="navbar-brand" href="/admin/lists/my">
-            My Lists
+            Мои шаблоны
+          </a>
+          <a className="navbar-brand" href="/admin/lists/process/all/">
+            Все листки адаптации
+          </a>
+          <a className="navbar-brand" href="/admin/lists/process/:id">
+            Мои листки адаптации
           </a>
           <a className="btn btn-outline-success" href="/signin">
             Bxoд
+          </a>
+          <a className="btn btn-outline-success" href="/signin">
+            Bыxoд
           </a>
         </form>
       </div>
