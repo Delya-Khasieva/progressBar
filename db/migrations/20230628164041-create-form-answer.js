@@ -18,11 +18,11 @@ module.exports = {
       },
 onDelete: 'CASCADE',
       },
-      form_id: {
+      list_id: {
         allowNull:false,
         type: Sequelize.INTEGER,
         references: {
-          model: 'Forms',
+          model: 'Lists',
       		key: 'id',
       },
 onDelete: 'CASCADE',
