@@ -13,13 +13,13 @@ import AllListsInProcess from './pages/AllListsInProcess';
 import MyListsInProcess from './pages/MyListsInProcess';
 
 
-export default function App() {
+export default function App({allLists}) {
   return (
     <div className="container" style={{height: '100vh', width: '100vw'}}>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/:listId" element={<ListPage />} />
+        <Route path="/:listId" element={<ListPage allLists={allLists}/>} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/admin/lists/process/all" element={<AllListsInProcess />} />
