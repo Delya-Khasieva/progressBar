@@ -19,9 +19,9 @@ export default function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/:listId" element={<ListPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/admin/lists" element={<ListPage />} />
         <Route path="/admin/lists/process/all" element={<AllListsInProcess />} />
         <Route path="/admin/lists/process/:id" element={<MyListsInProcess />} />
         <Route path="/admin/lists/:id" element={<ListItemPage />} />
