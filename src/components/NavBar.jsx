@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function NavBar({user}) {
-  console.log(user);
+  console.log({user});
+  const currentUrl = useLocation();
+  console.log({currentUrl});
   return (
     <nav className="navbar bg-body-white">
       <div className="container-fluid">
@@ -27,13 +30,10 @@ export default function NavBar({user}) {
             Bыxoд
           </a>
           </>
-         ) :(
-            <a className="btn btn-outline-success" href="/signin">
-            Bxoд
-          </a>
-          )
-        }
-         
+         ):( <>
+          {currentUrl.pathname !== "/signin" && <a className="btn btn-outline-success" href="/signin"> Bxoд </a>}
+          </>
+         )}
         </form>
       </div>
     </nav>
