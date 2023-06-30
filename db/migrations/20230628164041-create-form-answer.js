@@ -16,7 +16,7 @@ module.exports = {
           model: 'Answers',
       		key: 'id',
       },
-onDelete: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       list_id: {
         allowNull:false,
@@ -25,7 +25,7 @@ onDelete: 'CASCADE',
           model: 'Lists',
       		key: 'id',
       },
-onDelete: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,

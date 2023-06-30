@@ -8,6 +8,7 @@ import indexRouter from './routes/indexRouter';
 import apiRouter from './routes/apiRouter';
 import adminRouter from './routes/adminRouter';
 import adminListsRouter from './routes/adminListsRouter';
+import authRouter from './routes/authRouter';
 
 require('dotenv').config();
 
@@ -39,6 +40,8 @@ app.use(session(sessionConfig));
 
 app.use((req, res, next) => {
   res.locals.path = req.originalUrl;
+  // Юзер автоматически  попадает в Unitstayt
+  res.locals.user = req.session.user;
   next();
 });
 
@@ -46,5 +49,6 @@ app.use('/', indexRouter);
 app.use('/api', apiRouter);
 app.use('/admin', adminRouter);
 app.use('/admin/lists', adminListsRouter);
+app.use('/auth',authRouter);
 
 app.listen(PORT, () => console.log(`App has started on port ${PORT}`));

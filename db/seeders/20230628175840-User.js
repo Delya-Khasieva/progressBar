@@ -1,4 +1,4 @@
-'use strict';
+const bcrypt = require('bcrypt');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -6,19 +6,27 @@ module.exports = {
    
      await queryInterface.bulkInsert('Users', [{
       name: 'admin',
-      email: 'admin',
-      password: 'admin',
+      email: 'admin@yandex.ru',
+      password: await bcrypt.hash('123', 5),
       isAdmin: true
      
       },
+
+      {
+        name: 'hr',
+        email: 'hr@yandex.ru',
+        password: await bcrypt.hash('123', 5),
+        isAdmin: false
+
+      },
+
+
    
     ], {});
     
   },
 
-  async down (queryInterface, Sequelize) {
-   
-     await queryInterface.bulkDelete('Users', null, {});
-    
-  }
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('Users', null, {});
+  },
 };

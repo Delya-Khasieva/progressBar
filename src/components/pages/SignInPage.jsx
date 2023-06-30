@@ -1,8 +1,20 @@
+import axios from 'axios';
 import React from 'react';
 
 export default function SignInPage() {
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    const formData = Object.fromEntries(new FormData(event.target)) // [[email, admin@yandex.ru, [password, 123]]
+    const response = await axios.post('/auth/signin', formData);
+
+    if (response.status === 200) {
+      window.location.href = '/'
+
+    }
+  };
 
   return (
+
     <div
       style={{
         display: 'flex',
@@ -11,11 +23,11 @@ export default function SignInPage() {
         width: '100%',
       }}
     >
-      <form>
+     <form onSubmit={submitHandler} action="/auth/signin" method="POST">
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email
-            <input
+            <input name="email"
               type="email"
               className="form-control"
               id="exampleInputEmail1"
@@ -26,15 +38,10 @@ export default function SignInPage() {
         <div className="mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label">
             Пароль
-            <input type="password" className="form-control" id="exampleInputPassword1" />
+            <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
           </label>
         </div>
-        <div className="mb-3 form-check">
-          <label className="form-check-label" htmlFor="exampleCheck1">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            Check me out
-          </label>
-        </div>
+        
         <button type="submit" className="btn btn-primary">
           Войти
         </button>
