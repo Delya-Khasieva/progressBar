@@ -21,7 +21,7 @@ export default function NavBar() {
           <a className="btn btn-outline-success" href="/signin">
             Bxoд
           </a>
-          <a className="btn btn-outline-success" href="/signin">
+          <a className="btn btn-outline-success" href="/logout">
             Bыxoд
           </a>
         </form>
