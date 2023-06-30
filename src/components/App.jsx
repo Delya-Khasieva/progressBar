@@ -14,7 +14,7 @@ import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 
 
-export default function App({allLists, allListsProcess,myLists,user}) {
+export default function App({allLists, allListsProcess, myLists, user}) {
   return (
     <div className="container" style={{height: '100vh', width: '100vw'}}>
       <NavBar user={user}/>
