@@ -12,7 +12,7 @@ router.get('/signin', (req, res) => {
    res.render('Layout')
 });
 
-router.get('/lists/:listId', async (req, res) => {
+router.get('/lists/lists/:listId', async (req, res) => {
   const allLists = await List.findAll({
     where: {
       id: req.params.listId

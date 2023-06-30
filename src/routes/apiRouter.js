@@ -1,9 +1,8 @@
 import express from 'express';
+import {List,User} from '../../db/models';
 
 const apiRouter = express.Router();
 
-// apiRouter.get('/', (req, res) => {
-//   res.json({ hello: 'world' });
-// });
+
 
 export default apiRouter;

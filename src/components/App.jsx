@@ -14,7 +14,7 @@ import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 
 
-export default function App({allLists,user}) {
+export default function App({allLists, allListsProcess, myLists, user}) {
   return (
     <div className="container" style={{height: '100vh', width: '100vw'}}>
       <NavBar user={user}/>
@@ -24,8 +24,8 @@ export default function App({allLists,user}) {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/admin/lists/process/all" element={<AllListsInProcess />} />
-        <Route path="/admin/lists/process/:id" element={<MyListsInProcess />} />
+        <Route path="/admin/lists/process/all" element={<AllListsInProcess allListsProcess={allListsProcess}/>} />
+        <Route path="/admin/lists/process" element={<MyListsInProcess myLists = {myLists} />} />
         <Route path="/admin/lists/:id" element={<ListItemPage />} />
         <Route path="/admin/lists/:id/questions" element={<QuestionPage />} />
         <Route path="/admin/lists/my" element={<AdminListPage />} />
