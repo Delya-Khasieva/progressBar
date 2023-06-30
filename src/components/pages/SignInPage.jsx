@@ -41,6 +41,7 @@ export default function SignInPage() {
             <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
           </label>
         </div>
+        
         <button type="submit" className="btn btn-primary">
           Войти
         </button>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './NavBar';
+import NavBar from './ui/NavBar';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import ListPage from './pages/ListPage';
@@ -20,7 +20,7 @@ export default function App({allLists,user}) {
       <NavBar user={user}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/:listId" element={<ListPage allLists={allLists}/>} />
+        <Route path="/lists/:listId" element={<ListPage allLists={allLists} />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/admin" element={<AdminPage />} />
