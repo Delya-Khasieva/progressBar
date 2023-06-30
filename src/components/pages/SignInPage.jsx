@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function SignInPage() {
-
   return (
     <div
       style={{
@@ -35,7 +34,7 @@ export default function SignInPage() {
             Check me out
           </label>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-outline-success">
           Войти
         </button>
       </form>
