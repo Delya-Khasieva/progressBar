@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   FormAnswer.init({
     answer_id: DataTypes.INTEGER,
-    form_id: DataTypes.INTEGER
+    list_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'FormAnswer',

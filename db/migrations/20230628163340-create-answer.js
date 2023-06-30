@@ -20,7 +20,7 @@ module.exports = {
           model: 'Questions',
       		key: 'id',
       },
-onDelete: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,

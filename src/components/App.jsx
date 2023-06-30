@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './NavBar';
 import HomePage from './pages/HomePage';
-import SignInPage from './pages/SignInPage';
 import AdminPage from './pages/AdminPage';
 import ListPage from './pages/ListPage';
 import ListItemPage from './pages/ListItemPage';
@@ -11,16 +10,19 @@ import AdminListPage from './pages/AdminListPage';
 import AddUserPage from './pages/AddUserPage';
 import AllListsInProcess from './pages/AllListsInProcess';
 import MyListsInProcess from './pages/MyListsInProcess';
+import SignUpPage from './pages/SignUpPage';
+import SignInPage from './pages/SignInPage';
 
 
-export default function App({allLists}) {
+export default function App({allLists,user}) {
   return (
     <div className="container" style={{height: '100vh', width: '100vw'}}>
-      <NavBar />
+      <NavBar user={user}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/:listId" element={<ListPage allLists={allLists}/>} />
         <Route path="/signin" element={<SignInPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/admin/lists/process/all" element={<AllListsInProcess />} />
         <Route path="/admin/lists/process/:id" element={<MyListsInProcess />} />

@@ -11,6 +11,17 @@ export default function AddUserPage() {
       }}
     >
       <form>
+      <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Имя
+            <input
+              type="name"
+              className="form-control"
+              id="exampleInputName"
+              aria-describedby="nameHelp"
+            />
+          </label>
+        </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email
@@ -26,6 +37,12 @@ export default function AddUserPage() {
           <label htmlFor="exampleInputPassword1" className="form-label">
             Пароль
             <input type="password" className="form-control" id="exampleInputPassword1" />
+          </label>
+        </div>
+        <div className="mb-3 form-check">
+          <label className="form-check-label" htmlFor="exampleCheck1">
+            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+            Назначить администратором
           </label>
         </div>
         <button type="submit" className="btn btn-primary">
