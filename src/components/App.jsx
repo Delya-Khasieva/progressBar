@@ -13,7 +13,9 @@ import AllListsInProcess from './pages/AllListsInProcess';
 import MyListsInProcess from './pages/MyListsInProcess';
 
 
-export default function App({allLists}) {
+export default function App({allLists,allListsProcess,myLists}) {
+  console.log(myLists, '----------------')
+
   return (
     <div className="container" style={{height: '100vh', width: '100vw'}}>
       <NavBar />
@@ -22,8 +24,8 @@ export default function App({allLists}) {
         <Route path="/:listId" element={<ListPage allLists={allLists}/>} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/admin/lists/process/all" element={<AllListsInProcess />} />
-        <Route path="/admin/lists/process/:id" element={<MyListsInProcess />} />
+        <Route path="/admin/lists/process/all" element={<AllListsInProcess allListsProcess={allListsProcess}/>} />
+        <Route path="/admin/lists/process" element={<MyListsInProcess myLists = {myLists} />} />
         <Route path="/admin/lists/:id" element={<ListItemPage />} />
         <Route path="/admin/lists/:id/questions" element={<QuestionPage />} />
         <Route path="/admin/lists/my" element={<AdminListPage />} />
