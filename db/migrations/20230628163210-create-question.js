@@ -20,7 +20,7 @@ module.exports = {
           model: 'Lists',
       		key: 'id',
       },
-onDelete: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,

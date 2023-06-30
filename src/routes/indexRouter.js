@@ -8,22 +8,32 @@ router.get('/', (req, res) => {
   res.render('Layout');
 });
 
+router.get('/signin', (req, res) => {
+   res.render('Layout')
+});
+
 router.get('/lists/:listId', async (req, res) => {
   const allLists = await List.findAll({
     where: {
-      id: req.params.listId,
+      id: req.params.listId
     },
     include: {
       model: Question,
       include: {
-        model: Answer,
-      },
-    },
+        model: Answer
+      }
+    }
   });
   const initState = {
-    allLists,
-  };
+    allLists
+  }
   res.render('Layout', initState);
+});
+router.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.clearCookie('user_sid');
+  res.redirect('/');
+
 });
 
 router.get('/signin', (req, res) => res.render('Layout'));
