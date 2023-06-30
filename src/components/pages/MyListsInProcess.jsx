@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MyListsInProcess({ myLists }) {
+export default function MyListsInProcess({myLists}{ myLists }) {
   return (
     <div>
       <h2 style={{ marginTop: '100px' }}>Все листки адаптации</h2>

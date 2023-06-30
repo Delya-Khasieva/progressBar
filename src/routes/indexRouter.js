@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
   res.render('Layout');
 });
 
+router.get('/signin', (req, res) => {
+  res.render('Layout')
+});
+
 router.get('/lists/:listId', async (req, res) => {
   const allLists = await List.findAll({
     where: {
