@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom/server';
 import App from './App';
 
-export default function Layout({initState}) {
+export default function Layout({ initState }) {
   return (
     <html lang="en">
       <head>
@@ -28,12 +28,12 @@ export default function Layout({initState}) {
         />
         <script defer src="/app.js" />
         <script defer src="/vendor.js" />
-        <title>Document</title>
+        <title>ProgressBar</title>
       </head>
       <body>
         <div id="root">
           <StaticRouter location={initState.path}>
-            <App {...initState}/>
+            <App {...initState} />
           </StaticRouter>
         </div>
       </body>

@@ -27,7 +27,7 @@ export default function ListPage({ allLists, user }) {
         <br />
         Команда Высокой горы 💚
       </p>
-      <button type="button" className="btn btn-outline-success">
+      <button style={{ marginBottom: '20px' }} type="button" className="btn btn-outline-success">
         отправить
       </button>
     </div>

@@ -11,10 +11,10 @@ export default function HomePage() {
         marginTop: '50px',
       }}
     >
-      <h2 style={{ fontStyle: 'italic' }}>
+      <p style={{ fontSize: '20px' }}>
         Привет! Это корпоративный портал ООО “Высокая Гора”. Чтобы получить доступ к сайту -
         обратись в департамент HR.
-      </h2>
+      </p>
     </div>
   );
 }

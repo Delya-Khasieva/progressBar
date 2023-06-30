@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import NavBar from './NavBar';
+import NavBar from './ui/NavBar';
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import ListPage from './pages/ListPage';
