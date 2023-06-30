@@ -40,7 +40,7 @@ app.use(session(sessionConfig));
 
 app.use((req, res, next) => {
   res.locals.path = req.originalUrl;
-  // Юзер автоматически  попадает в Unitstayt
+  // Юзер автоматически  попадает в initStayt
   res.locals.user = req.session.user;
   next();
 });
