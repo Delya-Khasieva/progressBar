@@ -2,9 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function NavBar({user}) {
-  console.log({user});
   const currentUrl = useLocation();
-  console.log({currentUrl});
   return (
     <nav className="navbar bg-body-white">
       <div className="container-fluid">
