@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-export default function MyListsInProcess({myLists}) {
+export default function MyListsInProcess({myLists}{ myLists }) {
   return (
     <div>
-      <h2 style = {{marginTop: '100px'}}>Все листки адаптации</h2>
+      <h2 style={{ marginTop: '100px' }}>Все листки адаптации</h2>
       <br />
       <table className="table">
         <thead>
-        <tr>
+          <tr>
             <th scope="col">#</th>
             <th scope="col">Сотрудник</th>
             <th scope="col">Отправитель</th>
@@ -27,5 +27,4 @@ export default function MyListsInProcess({myLists}) {
       </table>
     </div>
   );
-
 }

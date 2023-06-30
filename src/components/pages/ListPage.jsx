@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import OneQuestion from '../ui/OneQuestion';
 
-export default function ListPage({ allLists }) {
+export default function ListPage({ allLists, user }) {
   const [answers, setAnswers] = useState(false);
 
   return (
@@ -27,6 +27,9 @@ export default function ListPage({ allLists }) {
         <br />
         Команда Высокой горы 💚
       </p>
+      <button type="button" className="btn btn-outline-success">
+        отправить
+      </button>
     </div>
   );
 }
